@@ -34,9 +34,12 @@ int main(){
     freopen("bai2.inp","r",stdin);
     freopen("bai2.out","w",stdout);
     int n,k,count1=0;
-    cin>>n;
-    if(dem_uoc(n)){
-        cout<<"1";
+    cin>>n>>k;
+    for(int i=n;i<=k;i++){
+        if(dem_uoc(n) && so_dao(n)){
+            count1++;
+        }
     }
+    cout<<count1;
     return 0;
 }
