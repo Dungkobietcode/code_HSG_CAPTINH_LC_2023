@@ -10,12 +10,16 @@ int so_dao(int n){
     return 0;
 }
 int ktnt(int m){
+    int dem=0;
     for(int i=2;i<=sqrt(m);i++){
         if(m%i==0)
-            return 0;
+            dem++;
     }
-
-    return 1;
+    if(dem==0){
+        return 1;
+    }else{
+    return 0;
+    }
 }
 int dem_uoc(int a){
     int dem=0;
@@ -27,8 +31,8 @@ int dem_uoc(int a){
     return dem>=3;
 }
 int main(){
-    // freopen("bai2.inp","r",stdin);
-    // freopen("bai2.out","w",stdout);
+    freopen("bai2.inp","r",stdin);
+    freopen("bai2.out","w",stdout);
     int n,k,count1=0;
     cin>>n;
     if(dem_uoc(n)){
