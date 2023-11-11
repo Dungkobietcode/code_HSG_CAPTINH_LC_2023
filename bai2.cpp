@@ -6,20 +6,16 @@ int so_dao(int n){
     reverse(s.begin(), s.end());
     if(goc==s){
         return 1;
-    }
+    }else
     return 0;
 }
 int ktnt(int m){
     int dem=0;
     for(int i=2;i<=sqrt(m);i++){
         if(m%i==0)
-            dem++;
+            return 0;
     }
-    if(dem==0){
-        return 1;
-    }else{
-    return 0;
-    }
+    return m>1;
 }
 int dem_uoc(int a){
     int dem=0;
@@ -36,7 +32,7 @@ int main(){
     int n,k,count1=0;
     cin>>n>>k;
     for(int i=n;i<=k;i++){
-        if(dem_uoc(n) && so_dao(n)){
+        if(dem_uoc(i) && so_dao(i)){
             count1++;
         }
     }
