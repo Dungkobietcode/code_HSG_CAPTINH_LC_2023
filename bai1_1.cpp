@@ -1,5 +1,21 @@
- i=1;i<=x;i++){
-        gt=gt*i;
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    freopen("t5.inp","r",stdin);
+    freopen("t5.out","w",stdout);
+    int n,x;
+    cin>>n>>x;
+    float gt=1;
+    float S=1;
+    for(int i=1;i<=n;i++)
+    {
+        float tmp=(gt*(2*i)*(2*i-1));
+        S+=pow(x,2*i)/tmp;
+        gt=tmp;
     }
-    return gt;
+    cout<<S;
+    return 0;
 }
