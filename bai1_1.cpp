@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    freopen("t5.inp","r",stdin);
-    freopen("t5.out","w",stdout);
+    freopen("bai1.inp","r",stdin);
+    freopen("bai2.out","w",stdout);
     int n,x;
     cin>>n>>x;
     float gt=1;
